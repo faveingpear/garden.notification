@@ -20,7 +20,7 @@ def sys_resolution():
             'y': u32.GetSystemMetrics(1)
         }
     elif platform == 'linux':
-        o = check_output('xrandr')
+        str(o = check_output('xrandr'))
         start = o.find('current') + 7
         end = o.find(', maximum')
         res = [int(n) for n in o[start:end].split('x')]
